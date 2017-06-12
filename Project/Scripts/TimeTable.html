@@ -1,0 +1,26 @@
+﻿<script src="Libraries/bootstrap.min.js" type="text/javascript"></script>
+<script src="Libraries/bootstrap.js" type="text/javascript"></script>
+<script src="Libraries/ui-bootstrap-tpls-0.10.0.min.js" type="text/javascript"></script>
+
+   <!----------------------------------------------------------------------------------------------------->
+                     <!--times table. gets the data from the localStorage-->
+   <!----------------------------------------------------------------------------------------------------->
+
+<button ng-click="Route('homePage')" class="btn btn-default" style="opacity:0.5;"> Close <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>Your Works Hours</h1>
+
+<div ng-controller="timeTableCtrl" style="margin:10px">
+
+    <input type="text" ng-change="filter()" ng-model="month" placeholder="filter by month" class="input nav nav-tabs" style="border-radius:5px;width:3.8%;font-size:large;font-family:cursive">
+    <table border="1" class="table table-condensed">
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Hour</th>
+        </tr>
+        <tr ng-repeat="time in timesArr" class="primary">
+            <td class="success">{{time.activity}}</td>
+            <td class="success">{{time.date|date :'yyyy-MM-dd'}}</td>
+            <td class="danger"> {{time.Hour}}</td>
+        </tr>
+    </table>
+</div>

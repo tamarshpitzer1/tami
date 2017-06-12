@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <title></title>
+    <link href="Style/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/Libraries/angular.min.js" type="text/javascript"></script>
+    <script src="Scripts/Libraries/angular-animate.js"></script>
+    <script src="Scripts/Libraries/jquery.min.js"></script>
+    <script src="Scripts/Libraries/angular-clock.js"></script>
+    <script src="Scripts/Libraries/angular-clock.min.js"></script>
+    <script src="Scripts/Libraries/Chart.min.js" type="text/javascript"></script>
+    <script src="Scripts/Libraries/angular-chart.js" type="text/javascript"></script>
+    <script src="Scripts/Libraries/bootstrap.js"></script>
+    <script src="Scripts/Libraries/bootstrap.min.js"></script>
+    <script src="Scripts/Libraries/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script src="Scripts/Libraries/angular-Route.js"></script>
+    <script src="Scripts/Libraries/angular-Route.min.js"></script>
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/Controllers/timeTableCtrl.js"></script>
+    <script src="Scripts/Controllers/myCtrl.js"></script>
+    <script src="Scripts/Directives/clockDir.js"></script>
+    <link href="Style/angular-clock.css" rel="stylesheet" />
+    <link href="Style/StyleSheet2.css" rel="stylesheet" />
+</head>
+<body ng-controller="myCtrl">
+    <div class="body">
+        <!----------------------------------------------------------------------------------------------------->
+        <!--My site options: sign in-out, ties table and statistic-->
+        <!----------------------------------------------------------------------------------------------------->
+        <div class="mynavbar" style="background-color: #110011">
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-user"></span></a>
+            <ul class="nav nav-tabs">
+                <li role="presentation">
+
+                <button id="btn1"   ng-click="isEnter=true" ng-model="enableEnter" ng-disabled="enableEnter==false">
+                            Sign In<span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                </li>
+                <li role="presentation">
+                    <button id="btn2" ng-click="isExit=true" ng-model="enableExit" ng-disabled="enableEnter==true">
+                         Sign Out <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                </li>
+                <li role="presentation"><button id="btn3" ng-click="Route('TimeTable')">Time Table<span class="glyphicon glyphicon-th-list"></span></button></li>
+                
+            </ul>
+        </div>
+        <!----------------------------------------------------------------------------------------------------->
+        <!--digital snd analog clock-->
+        <!----------------------------------------------------------------------------------------------------->
+        <ds-widget-clock show-analog></ds-widget-clock>
+        <ds-widget-clock show-digital digital-format="'hh:mm:ss a'" style="color:#990000;"></ds-widget-clock>
+        <!----------------------------------------------------------------------------------------------------->   
+        <!--sign in-out directives-->
+        <!----------------------------------------------------------------------------------------------------->
+        <div class="myFadeAnimation" style="float: left" ng-if="isEnter==true">
+            <time-dir timetype="enterTime" ng-if="isEnter==true" timefunction="SaveEnter(enterTime)"
+               ></time-dir>
+        </div>
+        <div class="myFadeAnimation" ng-if="isExit==true">
+            <time-dir timetype="exitTime" ng-if="isExit==true" timefunction="ExitSave(exitTime)"
+                ></time-dir>
+        </div>
+        <div class="notes" ng-if="showText">{{outMessage}}</div>
+        <!----------------------------------------------------------------------------------------------------->
+        <!--times table-->
+        <!----------------------------------------------------------------------------------------------------->
+        <div ng-view class="MyTimeTable">
+        </div>
+    </div>
+</body>
+</html>

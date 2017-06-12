@@ -1,0 +1,146 @@
+﻿body {
+  direction: ltr;
+  background-color: Orange; }
+  body .month {
+    border-radius: 5px;
+    width: 8%;
+    font-size: large;
+    font-family: cursive; }
+  body .myChartFadeAnimation {
+    width: 80%;
+    height: 100%;
+    background-color: #990000;
+    opacity: 0.95;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-shadow: 6px -5px 68px #e5246f; }
+  body .myChartFadeAnimation.ng-enter {
+    transition: 0.5s linear all;
+    opacity: 0;
+    left: -80%;
+    background-color: Aqua; }
+  body .myChartFadeAnimation.ng-enter.ng-enter-active {
+    opacity: 0.8;
+    left: 0;
+    background-color: Green; }
+  body .myChartFadeAnimation.ng-leave {
+    transition: 0.5s linear all;
+    opacity: 1;
+    background-color: Fuchsia;
+    left: 0; }
+  body .myChartFadeAnimation.ng-leave.ng-leave-active {
+    opacity: 0;
+    left: -80%;
+    background-color: Black; }
+  body .myFadeAnimation {
+    position: absolute;
+    width: 28%;
+    height: 100%;
+    background-color: #990000;
+    opacity: 0.8;
+    direction: ltr;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 4px -4px 60px #dd2265; }
+  body .myFadeAnimation.ng-enter {
+    transition: 0.7s linear all;
+    opacity: 0;
+    left: -20%;
+    background-color: Aqua; }
+  body .myFadeAnimation.ng-enter.ng-enter-active {
+    opacity: 0.8;
+    left: 0;
+    background-color: Green; }
+  body .myFadeAnimation.ng-leave {
+    transition: 0.7s linear all;
+    opacity: 1;
+    background-color: Fuchsia;
+    left: 0; }
+  body .myFadeAnimation.ng-leave.ng-leave-active {
+    opacity: 0;
+    left: -20%;
+    background-color: Black; }
+  body #btn1, body #btn2, body #btn3 {
+    background-color: black;
+    color: #428bca;
+    border: black;
+    width: 100%;
+    margin: 10%;
+    font-size: inherit; }
+  body .myClock {
+    position: fixed; }
+  body .active {
+    color: white; }
+  body li a:active {
+    background-color: #664488;
+    text-decoration: none; }
+  body .mynavbar {
+    background-color: black;
+    height: 50px;
+    width: 100%; }
+  body h3 {
+    color: #110011; }
+  body hr {
+    color: Orange;
+    height: 1%;
+    width: 85%;
+    opacity: 0.5; }
+  body .MyTimeTable {
+    background-color: #dd2265;
+    height: 100%;
+    opacity: 0.82;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 6px -6px 80px #dd2265; }
+  body .MyTimeTable.ng-enter {
+    transition: 0.9s linear all;
+    opacity: 0;
+    top: -20%;
+    background-color: #dd2265; }
+  body .MyTimeTable.ng-enter.ng-enter-active {
+    opacity: 0.8;
+    left: 0;
+    background-color: #dd2265; }
+  body .MyTimeTable.ng-leave {
+    transition: 0.7s linear all;
+    opacity: 0.85;
+    background-color: #dd220a;
+    left: 0; }
+  body .MyTimeTable.ng-leave.ng-leave-active {
+    opacity: 0;
+    top: -20%;
+    background-color: #dd2237; }
+  body .notes {
+    position: absolute;
+    bottom: 0%;
+    width: 80%;
+    height: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: #110011;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    font-size: 170%;
+    color: White;
+    text-align: center;
+    padding: 1%;
+    box-shadow: 4px -4px 60px #dd2265; }
+  body .notes.ng-enter {
+    background-color: #c8266d;
+    bottom: -20%;
+    transition: 1.5s linear all; }
+  body .notes.ng-enter.ng-enter-active {
+    bottom: 0%;
+    background-color: #be2973; }
+  body .notes.ng-leave {
+    left: 0%;
+    transition: 1.5s linear all;
+    background-color: #aa2a74; }
+  body .notes.ng-leave.ng-leave-active {
+    background-color: #962b76;
+    bottom: -20%; }
+
